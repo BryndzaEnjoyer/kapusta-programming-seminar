@@ -1,0 +1,1 @@
+Pocet hodou 50 max:  12 min:  5
