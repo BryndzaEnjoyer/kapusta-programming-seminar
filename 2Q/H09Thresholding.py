@@ -25,6 +25,7 @@ mask0 = image_stringything > my_otsu_threshold0
 
 mask = mask0 + mask1 #mask combinations
 
+
 plt.imshow(mask, cmap = 'gray')
 plt.show()
 plt.imshow(image_nuclei, cmap='gray')

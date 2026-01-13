@@ -27,7 +27,8 @@ kerk=np.array(a)
 kerk=kerk.reshape(20,20)
 kerk[10,10]=255
 
-
+finalkerk=np.array(a)  
+finalkerk=finalkerk.reshape(20,20)
 
 
 
@@ -84,7 +85,7 @@ def meansmoothing(kerk, finalkerk):
             av=a/9
             finalkerk[yy, z] =av
     
-    finalkerk[10,10]=255
+    finalkerk[10,10]=100
 
     return finalkerk
 
@@ -149,15 +150,15 @@ image_nuclei = image_stack[y1:y2,x1:x2,2]
 
 
 
-n=5 #number of iterations in gaussiansmoothing
+n=100 #number of iterations in gaussiansmoothing
 noisy = 20*np.random.rand(20,20)
 
 
 plt.imshow(randomdots(50, kerk), cmap='gray')
 plt.show()
-plt.imshow(meansmoothing(noisy), cmap='gray')
+plt.imshow(meansmoothing(kerk, finalkerk), cmap='gray')
 plt.show()
-plt.imshow(gaussianmoothing(noisy,n, x, y), cmap='gray')
+plt.imshow(gaussianmoothing(kerk,n, x, y), cmap='gray')
 plt.show()
 plt.imshow(gaussianmoothing(image_nuclei,n,X,Y), cmap='gray')
 plt.show()
