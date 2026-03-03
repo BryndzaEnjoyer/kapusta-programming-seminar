@@ -138,7 +138,7 @@ t = skimage.filters.threshold_otsu(cropped)
 thresholded = threshold_segmentation(cropped, t)
 
 # 3. Gaussian filter
-gaussian = gaussian_filter(cropped, 5)
+gaussian = gaussian_filter(cropped, 20)
 
 # 4. Median filter
 median = median_filter(cropped)
